@@ -54,4 +54,14 @@ describe('Import Properties Controller', () => {
 
     expect(response).toEqual(serverError(new Error()))
   })
+
+  it('should return 500 if create properties throws', async () => {
+    const { sut, createPropertiesFactorySpy } = sutFactory()
+    jest
+      .spyOn(createPropertiesFactorySpy, 'create')
+      .mockImplementationOnce(throwError)
+    const response = await sut.handle(requestFactory())
+
+    expect(response).toEqual(serverError(new Error()))
+  })
 })
