@@ -7,9 +7,10 @@
     },
     "sourceMap": true,
     "outDir": "dist",
-    "strict": true,
     "lib": ["esnext"],
     "esModuleInterop": true,
     "resolveJsonModule": true,
-  }
+  },
+  "include": ["src", "__test__"],
+  "exclude": ["node_modules"]
 }
