@@ -1,6 +1,8 @@
 import { ok, serverError } from '@app/controllers/helpers/http-response'
-import { ImportPropertiesController } from '@app/controllers/properties/import-properties'
-import { HttpRequest } from '@app/controllers/protocols/http'
+import {
+  ImportPropertiesController,
+  Request
+} from '@app/controllers/properties/import-properties'
 
 import { fileFactory } from '@test/mocks/core/File'
 import { throwError } from '@test/mocks/core/helpers'
@@ -21,11 +23,13 @@ const sutFactory = () => {
     createPropertiesFactorySpy
   }
 }
-const requestFactory = (): HttpRequest => {
+
+const requestFactory = (): Request => {
   return {
     file: fileFactory()
   }
 }
+
 describe('Import Properties Controller', () => {
   it('should call read file service with correct value', async () => {
     const { sut, readFactorySpy } = sutFactory()
@@ -69,6 +73,6 @@ describe('Import Properties Controller', () => {
     const { sut, createPropertiesFactorySpy } = sutFactory()
     const response = await sut.handle(requestFactory())
 
-    expect(response).toEqual(ok(createPropertiesFactorySpy.result))
+    expect(response).toEqual(ok({ count: createPropertiesFactorySpy.result }))
   })
 })

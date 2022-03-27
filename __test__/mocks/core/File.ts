@@ -5,7 +5,7 @@ import faker from 'faker'
 
 export const fileFactory = (options?: Partial<File>): File => {
   const chunks: any[] = []
-  let buffer: Buffer
+  let buffer: Buffer = Buffer.concat([])
   const mockedStream = new PassThrough()
 
   mockedStream.on('data', data => {

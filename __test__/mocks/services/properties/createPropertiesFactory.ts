@@ -1,14 +1,13 @@
 import { Property } from '@app/core/Property'
 import { CreateProperties } from '@app/services/properties/create-properties'
 
-import { propertyFactory } from '@test/mocks/core/Property'
-
 export class CreatePropertiesFactorySpy implements CreateProperties {
-  result = [propertyFactory(), propertyFactory()]
+  result: number
   params: Property[]
-  create(properties: Property[]): Promise<Property[]> {
+  create(properties: Property[]): Promise<{ count: number }> {
     this.params = properties
+    this.result = properties.length
 
-    return Promise.resolve(this.result)
+    return Promise.resolve({ count: this.result })
   }
 }
