@@ -8,6 +8,7 @@ export class ReadFactorySpy implements ReadFile {
   params: Buffer
   read(buffer: Buffer): Property[] {
     this.params = buffer
+
     return this.result
   }
 }

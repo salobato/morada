@@ -17,8 +17,8 @@ export const propertyFactory = (options?: Partial<Property>): Property => ({
   neighborhood: faker.address.city(),
   zipcode: faker.address.zipCode(),
   city: faker.address.city(),
-  bathrooms: faker.datatype.number(),
-  bedrooms: faker.datatype.number(),
+  bathrooms: faker.datatype.number(3),
+  bedrooms: faker.datatype.number(5),
   area: faker.datatype.number(),
   price: faker.datatype.number(),
   ...options

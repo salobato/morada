@@ -1,16 +1,22 @@
 import { ImportPropertiesController } from '@app/controllers/properties/import-properties'
-import { HttpRequest } from '@app/protocols/http'
+import { HttpRequest } from '@app/controllers/protocols/http'
 
 import { fileFactory } from '@test/mocks/core/File'
-import { ReadFactorySpy } from '@test/mocks/readFactory'
+import { CreatePropertiesFactorySpy } from '@test/mocks/services/properties/createPropertiesFactory'
+import { ReadFactorySpy } from '@test/mocks/services/protocols/readFactory'
 
 const sutFactory = () => {
   const readFactorySpy = new ReadFactorySpy()
-  const sut = new ImportPropertiesController(readFactorySpy)
+  const createPropertiesFactorySpy = new CreatePropertiesFactorySpy()
+  const sut = new ImportPropertiesController(
+    readFactorySpy,
+    createPropertiesFactorySpy
+  )
 
   return {
     sut,
-    readFactorySpy
+    readFactorySpy,
+    createPropertiesFactorySpy
   }
 }
 const requestFactory = (): HttpRequest => {
@@ -19,12 +25,23 @@ const requestFactory = (): HttpRequest => {
   }
 }
 describe('Import Properties Controller', () => {
-  it('should call read file service', () => {
+  it('should call read file service with correct value', async () => {
     const { sut, readFactorySpy } = sutFactory()
     const request = requestFactory()
     const buffer = request.file.content
+
     sut.handle(request)
 
     expect(readFactorySpy.params).toBe(buffer)
+  })
+
+  it('should call create properties with correct values', async () => {
+    const { sut, readFactorySpy, createPropertiesFactorySpy } = sutFactory()
+    const request = requestFactory()
+    const properties = readFactorySpy.result
+
+    sut.handle(request)
+
+    expect(createPropertiesFactorySpy.params).toEqual(properties)
   })
 })
