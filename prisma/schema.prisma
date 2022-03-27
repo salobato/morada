@@ -31,4 +31,6 @@ model Property {
   area            Int
   price           Int
   created_at      DateTime @default(now())
+
+  @@map("properties")
 }
