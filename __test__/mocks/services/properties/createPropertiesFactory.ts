@@ -1,10 +1,10 @@
-import { Property } from '@app/core/Property'
+import { PropertyDTO } from '@app/core/Property'
 import { CreateProperties } from '@app/services/properties/create-properties'
 
 export class CreatePropertiesFactorySpy implements CreateProperties {
   result: number
-  params: Property[]
-  create(properties: Property[]): Promise<{ count: number }> {
+  params: PropertyDTO[]
+  create(properties: PropertyDTO[]): Promise<{ count: number }> {
     this.params = properties
     this.result = properties.length
 

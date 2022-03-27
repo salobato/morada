@@ -1,12 +1,12 @@
-import { Property } from '@app/core/Property'
+import { PropertyDTO } from '@app/core/Property'
 import { ReadFile } from '@app/services/protocols/read'
 
-import { propertyFactory } from '@test/mocks/core/Property'
+import { propertyFactoryDTO } from '@test/mocks/core/Property'
 
 export class ReadFactorySpy implements ReadFile {
-  result = [propertyFactory(), propertyFactory()]
+  result = [propertyFactoryDTO(), propertyFactoryDTO()]
   params: Buffer
-  read(buffer: Buffer): Property[] {
+  read(buffer: Buffer): PropertyDTO[] {
     this.params = buffer
 
     return this.result

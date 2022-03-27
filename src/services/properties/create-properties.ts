@@ -1,5 +1,5 @@
-import { Property } from '@app/core/Property'
+import { PropertyDTO } from '@app/core/Property'
 
 export interface CreateProperties {
-  create: (properties: Property[]) => Promise<{ count: number }>
+  create: (properties: PropertyDTO[]) => Promise<{ count: number }>
 }
