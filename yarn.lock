@@ -750,6 +750,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@prisma/engines@npm:3.11.1-1.1a2506facaf1a4727b7c26850735e88ec779dee9":
+  version: 3.11.1-1.1a2506facaf1a4727b7c26850735e88ec779dee9
+  resolution: "@prisma/engines@npm:3.11.1-1.1a2506facaf1a4727b7c26850735e88ec779dee9"
+  checksum: 87750ba42f2ad359e381818264acebc02d6e8fa61fe878c8e6e9ed2e0c2d13171e5c5e60ac9b380a9df54b6bc1c83750bbc6364ef09d8db7a613127f236a647b
+  languageName: node
+  linkType: hard
+
 "@sinonjs/commons@npm:^1.7.0":
   version: 1.8.3
   resolution: "@sinonjs/commons@npm:1.8.3"
@@ -3607,6 +3614,7 @@ __metadata:
     faker: 5.5.3
     jest: ^27.5.1
     prettier: ^2.6.1
+    prisma: ^3.11.1
     ts-jest: ^27.1.4
     ts-node: ^10.7.0
     typescript: ^4.6.3
@@ -3934,6 +3942,18 @@ __metadata:
     ansi-styles: ^5.0.0
     react-is: ^17.0.1
   checksum: cf610cffcb793885d16f184a62162f2dd0df31642d9a18edf4ca298e909a8fe80bdbf556d5c9573992c102ce8bf948691da91bf9739bee0ffb6e79c8a8a6e088
+  languageName: node
+  linkType: hard
+
+"prisma@npm:^3.11.1":
+  version: 3.11.1
+  resolution: "prisma@npm:3.11.1"
+  dependencies:
+    "@prisma/engines": 3.11.1-1.1a2506facaf1a4727b7c26850735e88ec779dee9
+  bin:
+    prisma: build/index.js
+    prisma2: build/index.js
+  checksum: 0dc24dad3b71ece4b5de69451f90bce20b3d52cd4b17626a725536daef0db07ee2bb08d4e50aa49332bd0b3a19a9e34bd230551bb0c859acea34f1aa508f17bd
   languageName: node
   linkType: hard
 
