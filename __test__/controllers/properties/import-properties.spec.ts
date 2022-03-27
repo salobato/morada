@@ -1,7 +1,9 @@
+import { serverError } from '@app/controllers/helpers/http-response'
 import { ImportPropertiesController } from '@app/controllers/properties/import-properties'
 import { HttpRequest } from '@app/controllers/protocols/http'
 
 import { fileFactory } from '@test/mocks/core/File'
+import { throwError } from '@test/mocks/core/helpers'
 import { CreatePropertiesFactorySpy } from '@test/mocks/services/properties/createPropertiesFactory'
 import { ReadFactorySpy } from '@test/mocks/services/protocols/readFactory'
 
@@ -30,7 +32,7 @@ describe('Import Properties Controller', () => {
     const request = requestFactory()
     const buffer = request.file.content
 
-    sut.handle(request)
+    await sut.handle(request)
 
     expect(readFactorySpy.params).toBe(buffer)
   })
@@ -40,8 +42,16 @@ describe('Import Properties Controller', () => {
     const request = requestFactory()
     const properties = readFactorySpy.result
 
-    sut.handle(request)
+    await sut.handle(request)
 
     expect(createPropertiesFactorySpy.params).toEqual(properties)
+  })
+
+  it('should return 500 if read file throws', async () => {
+    const { sut, readFactorySpy } = sutFactory()
+    jest.spyOn(readFactorySpy, 'read').mockImplementationOnce(throwError)
+    const response = await sut.handle(requestFactory())
+
+    expect(response).toEqual(serverError(new Error()))
   })
 })
