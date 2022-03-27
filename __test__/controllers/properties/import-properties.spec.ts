@@ -1,4 +1,4 @@
-import { serverError } from '@app/controllers/helpers/http-response'
+import { ok, serverError } from '@app/controllers/helpers/http-response'
 import { ImportPropertiesController } from '@app/controllers/properties/import-properties'
 import { HttpRequest } from '@app/controllers/protocols/http'
 
@@ -63,5 +63,12 @@ describe('Import Properties Controller', () => {
     const response = await sut.handle(requestFactory())
 
     expect(response).toEqual(serverError(new Error()))
+  })
+
+  it('should return 200 on success', async () => {
+    const { sut, createPropertiesFactorySpy } = sutFactory()
+    const response = await sut.handle(requestFactory())
+
+    expect(response).toEqual(ok(createPropertiesFactorySpy.result))
   })
 })
