@@ -1,7 +1,7 @@
 import { HttpResponse } from '@app/controllers/protocols/http'
 
 export class ServerError extends Error {
-  constructor(stack: string) {
+  constructor(stack?: string) {
     super('Internal server error, please try again later')
     this.name = 'ServerError'
     this.stack = stack
