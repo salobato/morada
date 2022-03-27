@@ -3,6 +3,7 @@ import { Property } from '@app/core/Property'
 import faker from 'faker'
 
 export const propertyFactory = (options?: Partial<Property>): Property => ({
+  id: faker.datatype.uuid(),
   name: faker.random.words(),
   forecast_start: faker.date.recent(),
   forecast_end: faker.date.soon(),
@@ -21,5 +22,6 @@ export const propertyFactory = (options?: Partial<Property>): Property => ({
   bedrooms: faker.datatype.number(5),
   area: faker.datatype.number(),
   price: faker.datatype.number(),
+  created_at: faker.date.recent(),
   ...options
 })

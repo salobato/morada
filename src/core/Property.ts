@@ -1,4 +1,5 @@
 export interface Property {
+  id: string
   name: string
   forecast_start: Date
   forecast_end: Date
@@ -17,4 +18,5 @@ export interface Property {
   bedrooms: number
   area: number
   price: number
+  created_at: Date
 }

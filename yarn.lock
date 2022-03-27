@@ -750,6 +750,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@prisma/client@npm:^3.11.1":
+  version: 3.11.1
+  resolution: "@prisma/client@npm:3.11.1"
+  dependencies:
+    "@prisma/engines-version": 3.11.1-1.1a2506facaf1a4727b7c26850735e88ec779dee9
+  peerDependencies:
+    prisma: "*"
+  peerDependenciesMeta:
+    prisma:
+      optional: true
+  checksum: 8750495b80f1fe0e2a70e439b6c8b5912ca04e6ca8baa1bfed0750bdfe130d8e0d29600414471873fce8683a92b74a45a175d68ab662d8a4f877c59430163e4e
+  languageName: node
+  linkType: hard
+
+"@prisma/engines-version@npm:3.11.1-1.1a2506facaf1a4727b7c26850735e88ec779dee9":
+  version: 3.11.1-1.1a2506facaf1a4727b7c26850735e88ec779dee9
+  resolution: "@prisma/engines-version@npm:3.11.1-1.1a2506facaf1a4727b7c26850735e88ec779dee9"
+  checksum: ae3b4caf41f316b61c6b7b607fd9466ce5d8ff798ecb6877899a5ae65a55a62d02b83d4639dc6f48900bdf79702b08ff441772367809e01762de1fb74fb731c6
+  languageName: node
+  linkType: hard
+
 "@prisma/engines@npm:3.11.1-1.1a2506facaf1a4727b7c26850735e88ec779dee9":
   version: 3.11.1-1.1a2506facaf1a4727b7c26850735e88ec779dee9
   resolution: "@prisma/engines@npm:3.11.1-1.1a2506facaf1a4727b7c26850735e88ec779dee9"
@@ -3603,6 +3624,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "morada@workspace:."
   dependencies:
+    "@prisma/client": ^3.11.1
     "@types/faker": ^5.5.9
     "@types/jest": ^27.4.1
     "@types/node": ^17.0.23
