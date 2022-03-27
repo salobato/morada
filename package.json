@@ -1,0 +1,7 @@
+{
+  "name": "morada",
+  "author": "Salo Lobato <github.com/salobato>",
+  "version": "0.0.1",
+  "license": "MIT",
+  "packageManager": "yarn@3.1.1"
+}
