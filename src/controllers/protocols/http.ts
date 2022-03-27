@@ -1,7 +1,7 @@
 import { File } from '@app/core/File'
 
 enum StatusCode {
-  'success' = 200,
+  'ok' = 200,
   'noContent' = 204,
   'badRequest' = 400,
   'serverError' = 500
