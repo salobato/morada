@@ -1,4 +1,4 @@
-import { File } from '@app/core/File'
+import { File } from '@app/core/entities'
 import { PassThrough } from 'stream'
 
 import faker from 'faker'

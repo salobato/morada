@@ -1,4 +1,4 @@
-import { CreatePropertiesRepository } from '@app/repositories/create-properties'
+import { CreatePropertiesRepository } from '@app/data/repositories/create-properties'
 import { context } from '@app/main/client/prisma'
 
 export const createPropertiesRepository = () => {

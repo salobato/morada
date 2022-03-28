@@ -1,13 +1,13 @@
-import { File } from '@app/core/File'
-import { ok, serverError } from '@app/controllers/helpers/http-response'
-import { Controller } from '@app/controllers/protocols/controller'
-import { HttpResponse } from '@app/controllers/protocols/http'
-import { CreateProperties } from '@app/services/properties/create-properties'
-import { ReadFile } from '@app/services/protocols/read'
+import { File } from '@app/core/entities'
+import { ok, serverError } from '@app/data/helpers'
+import { Controller, HttpResponse } from '@app/data/protocols'
+import { CreateProperties } from '@app/core/services'
+import { ReadFile } from '@app/core/protocols'
 
 export interface Request {
   file: File
 }
+
 export class ImportPropertiesController implements Controller {
   constructor(
     private readonly readFile: ReadFile,

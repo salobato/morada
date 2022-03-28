@@ -1,13 +1,9 @@
-import { ok, serverError } from '@app/controllers/helpers/http-response'
-import {
-  ImportPropertiesController,
-  Request
-} from '@app/controllers/properties/import-properties'
+import { ok, serverError } from '@app/data/helpers'
+import { ImportPropertiesController, Request } from '@app/data/controllers'
 
-import { fileFactory } from '@test/mocks/core/File'
-import { throwError } from '@test/mocks/core/helpers'
-import { CreatePropertiesFactorySpy } from '@test/mocks/services/properties/createPropertiesFactory'
-import { ReadFactorySpy } from '@test/mocks/services/protocols/readFactory'
+import { fileFactory, throwError } from '@test/mocks/core'
+import { CreatePropertiesFactorySpy } from '@test/mocks/services'
+import { ReadFactorySpy } from '@test/mocks/protocols'
 
 const sutFactory = () => {
   const readFactorySpy = new ReadFactorySpy()

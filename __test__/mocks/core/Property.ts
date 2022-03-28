@@ -1,4 +1,4 @@
-import { Property, PropertyDTO } from '@app/core/Property'
+import { Property, PropertyDTO } from '@app/core/entities'
 
 import faker from 'faker'
 

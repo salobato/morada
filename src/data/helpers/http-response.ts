@@ -1,4 +1,4 @@
-import { HttpResponse } from '@app/controllers/protocols/http'
+import { HttpResponse } from '@app/data/protocols'
 
 export class ServerError extends Error {
   constructor(stack?: string) {

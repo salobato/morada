@@ -1,6 +1,6 @@
-import { PropertyDTO } from '@app/core/Property'
-import { Context } from '@app/repositories/protocols/context'
-import { CreateProperties } from '@app/services/properties/create-properties'
+import { PropertyDTO } from '@app/core/entities'
+import { CreateProperties } from '@app/core/services'
+import { Context } from '@app/data/protocols'
 
 export class CreatePropertiesRepository implements CreateProperties {
   constructor(private readonly context: Context) {}

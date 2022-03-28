@@ -1,5 +1,5 @@
-import { PropertyDTO } from '@app/core/Property'
-import { ReadFile } from '@app/services/protocols/read'
+import { PropertyDTO } from '@app/core/entities'
+import { ReadFile } from '@app/core/protocols'
 
 import { propertyFactoryDTO } from '@test/mocks/core/Property'
 

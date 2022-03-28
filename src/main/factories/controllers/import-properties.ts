@@ -1,6 +1,6 @@
-import { ImportPropertiesController } from '@app/controllers/properties/import-properties'
-import { Controller } from '@app/controllers/protocols/controller'
-import { ReadFileAdapter } from '@app/main/adapters/readFile'
+import { ImportPropertiesController } from '@app/data/controllers'
+import { Controller } from '@app/data/protocols'
+import { ReadFileAdapter } from '@app/main/adapters/read-file'
 import { createPropertiesRepository } from '@app/main/factories/repositories/create-properties'
 
 export const importPropertiesController = (): Controller => {

@@ -1,5 +1,5 @@
-import { PropertyDTO } from '@app/core/Property'
-import { CreateProperties } from '@app/services/properties/create-properties'
+import { PropertyDTO } from '@app/core/entities'
+import { CreateProperties } from '@app/core/services'
 
 export class CreatePropertiesFactorySpy implements CreateProperties {
   result: number
