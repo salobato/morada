@@ -5,7 +5,8 @@ import { adaptRoute } from '@app/main/adapters/express'
 import {
   importPropertiesController,
   listPropertiesController,
-  listPropertiesByCityController
+  listPropertiesByCityController,
+  listPropertiesByEndDateController
 } from '@app/main/factories/controllers'
 
 const upload = multer()
@@ -19,5 +20,12 @@ export const routes = (router: Router): void => {
     adaptRoute(importPropertiesController())
   )
   router.get('/properties', adaptRoute(listPropertiesController()))
-  router.get('/properties/:city', adaptRoute(listPropertiesByCityController()))
+  router.get(
+    '/propertiesByCity/:city',
+    adaptRoute(listPropertiesByCityController())
+  )
+  router.get(
+    '/propertiesByEndDate/:criteria/:months',
+    adaptRoute(listPropertiesByEndDateController())
+  )
 }
