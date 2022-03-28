@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest --runInBand --watch",
+    "test:ci": "jest --coverage --runInBand",
     "build": "tsc -p tsconfig.build.json",
     "dev": "tsnd --respawn --transpile-only --ignore-watch node_modules -r tsconfig-paths/register ./src/main/server.ts",
     "start": "node --trace-warnings ./dist/main/server.js"
