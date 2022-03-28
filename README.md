@@ -20,11 +20,11 @@ $ yarn install
 ## Rodando a aplicação
 
 ```bash
-# desenvolvimento
-$ yarn run dev
-
 # build
 $ yarn run build
+
+# desenvolvimento
+$ yarn run dev
 
 # modo produção
 $ yarn run start
