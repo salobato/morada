@@ -2,7 +2,7 @@ import { Property, PropertyDTO } from '@app/core/entities'
 
 import faker from 'faker'
 
-export const propertyFactory = (options?: Property): Property => ({
+export const propertyFactory = (options?: Partial<Property>): Property => ({
   id: faker.datatype.uuid(),
   name: faker.random.words(),
   forecast_start: faker.date.recent(),
