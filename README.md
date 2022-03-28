@@ -3,6 +3,19 @@
 
   - [Imóveis](./requirements/properties.md)
 
+> ## Ferramentas utilizadas:
+ - TypeScript
+ - Node.js
+ - Express
+ - Prisma
+ - ESLint
+ - Prettier
+ - xlsx
+ - multer
+ - jest
+ - yarn
+ - Insomnia (Export da configuração usada para os testes [aqui](./docs/Insomnia.json))
+
 > ## Instruções para execução:
  
 ### Clonar o repositório:
