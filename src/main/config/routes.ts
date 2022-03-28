@@ -4,7 +4,8 @@ import { fileMiddleware } from '@app/main/middlewares'
 import { adaptRoute } from '@app/main/adapters/express'
 import {
   importPropertiesController,
-  listPropertiesController
+  listPropertiesController,
+  listPropertiesByCityController
 } from '@app/main/factories/controllers'
 
 const upload = multer()
@@ -18,4 +19,5 @@ export const routes = (router: Router): void => {
     adaptRoute(importPropertiesController())
   )
   router.get('/properties', adaptRoute(listPropertiesController()))
+  router.get('/properties/:city', adaptRoute(listPropertiesByCityController()))
 }
