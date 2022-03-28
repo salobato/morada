@@ -12,13 +12,13 @@ export class FindPropertiesByEndDateRepository
 {
   constructor(private readonly context: Context) {}
   async findMany(params: Params): Promise<Property[]> {
-    const now = new Date()
-    const monthsFromNow = now.setMonth(params.months)
+    const date = new Date()
+    date.setMonth(date.getMonth() + params.months)
 
     const response = await this.context.prisma.property.findMany({
       where: {
         forecast_end: {
-          [params.criteria]: monthsFromNow
+          [params.criteria]: date
         }
       }
     })
