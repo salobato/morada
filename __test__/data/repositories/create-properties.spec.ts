@@ -1,5 +1,5 @@
-import { CreatePropertiesRepository } from '@app/data/repositories/create-properties'
 import { Context } from '@app/data/protocols'
+import { CreatePropertiesRepository } from '@app/data/repositories'
 import { createMockContext } from '@test/mocks/context'
 import { propertyFactoryDTO } from '@test/mocks/core/Property'
 
