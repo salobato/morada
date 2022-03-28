@@ -1,4 +1,6 @@
 # Teste Morada
+
+- Junto à aplicação, se encontra a [planilha](./docs/Imoveis.xlsx) utilizada no upload de arquivo da rota **POST** /properties, tendo esse uma alteração na coluna C da linha 10, para fins de formatar a data no padrão do resto das datas.
 > ## Requisitos
 
   - [Imóveis](./docs/requirements/properties.md)
