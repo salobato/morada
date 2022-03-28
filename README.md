@@ -1,7 +1,7 @@
 # Teste Morada
 > ## Requisitos
 
-  - [Imóveis](./requirements/properties.md)
+  - [Imóveis](./docs/requirements/properties.md)
 
 > ## Ferramentas utilizadas:
  - TypeScript
