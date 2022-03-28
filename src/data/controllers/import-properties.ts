@@ -4,7 +4,7 @@ import { Controller, HttpResponse } from '@app/data/protocols'
 import { CreateProperties } from '@app/core/services'
 import { ReadFile } from '@app/core/protocols'
 
-export interface Request {
+interface Request {
   file: File
 }
 
