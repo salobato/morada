@@ -11,13 +11,13 @@
 $ git clone github.com/salobato/morada.git
 ```
   
-## Instalar dependências:
+### Instalar dependências:
 
 ```bash
 $ yarn install
 ```
 
-## Rodando a aplicação
+## Rodando a aplicação:
 
 ```bash
 # build
@@ -30,9 +30,12 @@ $ yarn run dev
 $ yarn run start
 ```
 
-## Testes
+## Testes:
 
 ```bash
 # testes unitários
 $ yarn run test
+
+# testes coverage
+$ yarn run test:ci
 ```
