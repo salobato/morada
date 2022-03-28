@@ -1,9 +1,14 @@
+import { File } from '@app/core/entities'
 import { ok, serverError } from '@app/data/helpers'
-import { ImportPropertiesController, Request } from '@app/data/controllers'
+import { ImportPropertiesController } from '@app/data/controllers'
 
 import { fileFactory, throwError } from '@test/mocks/core'
 import { CreatePropertiesFactorySpy } from '@test/mocks/services'
 import { ReadFactorySpy } from '@test/mocks/protocols'
+
+interface Request {
+  file: File
+}
 
 const sutFactory = () => {
   const readFactorySpy = new ReadFactorySpy()
