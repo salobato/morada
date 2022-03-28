@@ -25,3 +25,16 @@
 - [x] Retorna **404** se o endpoint não existir
 - [x] Retorna **204** se não existirem imóveis cadastrados
 - [x] Retorna **500** se os imóveis não forem lidos com sucesso
+
+# Listar imóveis por cidade
+
+> ## Caso de sucesso:
+
+- [x] Recebe uma requisição do tipo **GET** na rota **/properties/:city**
+- [x] Retorna **200** com o todos os imóveis cadastrados no banco de dados que se encontram na cidade pesquisada
+
+> ## Exceções: 
+
+- [x] Retorna **404** se o endpoint não existir
+- [x] Retorna **204** se não existirem imóveis cadastrados que se encontram na cidade pesquisada
+- [x] Retorna **500** se os imóveis não forem lidos com sucesso
